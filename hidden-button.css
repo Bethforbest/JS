@@ -1,0 +1,35 @@
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    height: 50px;
+    width: 245px;
+
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 1px 1px 3px 1px black;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label::after {
+    content: 'Hidden';
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: 'Show';
+}
+
+form {
+    visibility: visible;
+}
+
+input[type="checkbox"]:checked ~ form {
+    visibility: hidden;
+}

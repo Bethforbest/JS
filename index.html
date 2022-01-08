@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Lights</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="hidden-button.css" />
+    <link rel="stylesheet" href="diagram.css">
+
+    <script src="functions.js"></script>
+    <script src="const.js" defer></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="container flex">
+      <div class="traffic-lights">
+        <div data-color="red"></div>
+        <div data-color="yellow"></div>
+        <div data-color="green"></div>
+      </div>
+      <div class="control flex">
+        <input type="checkbox" id="hidden-control"><label for="hidden-control"></label>
+        <form>
+          <input name="red" type="number" min="0" step="1" placeholder="Red Continue" />
+          <input name="yellow" type="number" min="0" step="1" placeholder="Yellow Continue" />
+          <input name="green" type="number" min="0" step="1" placeholder="Green Continue" />
+          <input name="full" type="number" min="0" step="1" placeholder="Full Continue" />
+        </form>
+      </div>
+    </section>
+
+    <section class="diagram">
+        <div class="animation-example"></div>
+
+        <div class="row">
+            <div data-block="red"></div>
+        </div>
+        <div class="row">
+            <div data-block="yellow-1"></div>
+            <div data-block="yellow-2"></div>
+        </div>
+        <div class="row">
+            <div data-block="green"></div>
+        </div>
+
+        <button id="pause">Pause</button>
+    </section>
+
+
+    <section id="animation"></section>
+    <!-- 1 Синхронизировать анимации -->
+    <!-- 2 При скрытии переходить в дежурный режим -->
+    <!-- 3 На каждом сигнале реализовать обратный отсчет времени -->
+  </body>
+</html>

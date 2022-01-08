@@ -1,0 +1,66 @@
+.diagram .row {
+    width: 80%;
+    height: 80px;
+    margin: 40px auto;
+
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+
+    position: relative;
+}
+
+[data-block] {
+    position: absolute;
+    height: 60px;
+    bottom: 0;
+
+    width: 10px;
+}
+
+[data-block="red"] {
+    background-color: red;
+}
+
+[data-block*="yellow"] {
+    background-color: yellow;
+}
+
+[data-block="yellow-2"] {
+    right: 0;
+}
+
+[data-block="green"] {
+    background-color: green;
+}
+
+.diagram {
+    position: relative;
+}
+
+.diagram button {
+    margin: 0 auto;
+    font-size: 32px;
+    display: block;
+}
+
+.animation-example {
+    width: 3px;
+    background-color: gray;
+    height: 330px;
+    position: absolute;
+
+    left: 10%;
+    top: 0;
+
+    z-index: 101;
+}
+
+@keyframes example {
+    from {
+        left: 10%;
+    }
+
+    to {
+        left: 90%;
+    }
+}
